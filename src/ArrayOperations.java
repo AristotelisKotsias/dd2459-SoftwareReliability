@@ -1,14 +1,8 @@
 import java.lang.IllegalArgumentException;
 import java.util.Arrays;
+import java.util.Random;
 
 public class ArrayOperations {
-  public static void main(String[] args) {
-    int[] a = new int[]{0, 132, 1024, 402, 1, 1};
-    sort(a);
-    System.out.println(Arrays.toString(a));
-
-    System.out.println(binarySearch(a, 0, a.length - 1, 132));
-  }
 
   public static void sort(int arr[])
   {
@@ -71,6 +65,41 @@ public class ArrayOperations {
 
   public static boolean membershipUnsorted(int[] A, int key) {
     sort(A);
+    System.out.println(Arrays.toString(A));
+    System.out.println(key);
     return membership(A, key);
+  }
+
+  public static void main(String[] args) {
+    Random random = new Random();
+    int[] a = new int[20];
+    int key;
+
+    for (int i = 0; i < 20; i++) {
+      a[i] = random.nextInt(50);
+    }
+
+    key = random.nextInt(20);
+    System.out.println(membershipUnsorted(a,key));
+
+  /*
+    Test-case 1: (sorted, 1)       [0-wise]
+    System.out.println(membershipUnsorted({1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20},1));
+
+    Test-case 2: (sorted, 10)      [1-wise]
+    System.out.println(membershipUnsorted({1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20},10));
+
+    Test-case 3: (sorted, 20)      [1-wise]
+    System.out.println(membershipUnsorted({1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20},20));
+
+    Test-case 4: (backwards, 1)    [1-wise]
+    Test-case 5: (half-sorted, 1)  [1-wise]
+
+    Test-case 6: (backwards, 10)   [2-wise]
+    Test-case 7: (backwards, 20)   [2-wise]
+    Test-case 8: (half-sorted, 10) [2-wise]
+    Test-case 9: (half-sorted, 20) [2-wise]
+   */
+
   }
 }
