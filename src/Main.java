@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
 
 public class Main {
@@ -47,8 +46,8 @@ public class Main {
         System.out.println(Arrays.toString(halfSorted)); */
       
         //Test-case 1: (sorted, 1)       [0-wise]
-        System.out.println(ap.membershipUnsorted(a,key));
-        System.out.println(ap.membershipUnsortedWrong(a,key));
+        System.out.println(ap.membershipUnsorted(a,key1));
+        System.out.println(ap.membershipUnsortedWrong(a,key1));
         System.out.println("1");
 
         //Test-case 2: (sorted, 10)      [1-wise]
@@ -62,13 +61,13 @@ public class Main {
         System.out.println("3");
     
         //Test-case 4: (backwards, 1)    [1-wise]
-        System.out.println(ap.membershipUnsorted(reversed,key));
-        System.out.println(ap.membershipUnsortedWrong(reversed,key));
+        System.out.println(ap.membershipUnsorted(reversed,key1));
+        System.out.println(ap.membershipUnsortedWrong(reversed,key1));
         System.out.println("4");
 
         //Test-case 5: (half-sorted, 1)  [1-wise]
-        System.out.println(ap.membershipUnsorted(halfSorted,key));
-        System.out.println(ap.membershipUnsortedWrong(halfSorted,key));
+        System.out.println(ap.membershipUnsorted(halfSorted,key1));
+        System.out.println(ap.membershipUnsortedWrong(halfSorted,key1));
         System.out.println("5");
     
         //Test-case 6: (backwards, 10)   [2-wise]
