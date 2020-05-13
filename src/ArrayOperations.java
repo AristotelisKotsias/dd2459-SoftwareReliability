@@ -5,10 +5,6 @@ public class ArrayOperations {
   {
     int n = arr.length;
 
-    if (n == 0) {
-      //throw new IllegalArgumentException("Array must not be empty"); // Commented this out as mutation
-    }
-
     for (int i = 0; i < n-1; i++)
     {
       int min_idx = i;
@@ -54,21 +50,19 @@ public class ArrayOperations {
     return membership(A, key);
   }
 
+  //----------------------------------------------------------------------------------------------------------------------------------------
+
   public void sortWrong(int arr[])
   {
     int n = arr.length;
-
-    if (n == 0) {
-      //throw new IllegalArgumentException("Array must not be empty"); // Commented this out as mutation
-    }
 
     // One by one move boundary of unsorted subarray
     for (int i = 0; i < n-1; i++)
     {
       // Find the minimum element in unsorted array
       int min_idx = i;
-      for (int j = i+1; j < n; j++) // Changed to ".. j < n-1" in mutation
-        if (arr[j] < arr[min_idx]) // Changed to >= in mutation
+      for (int j = i+1; j < n; j++) 
+        if (arr[j] < arr[min_idx]) // #>
           min_idx = j;
 
       // Swap the found minimum element with the first
@@ -91,12 +85,12 @@ public class ArrayOperations {
 
       // If element is smaller than mid, then
       // it can only be present in left subarray
-      if (arr[mid] > x)
-        return binarySearch(arr, l, mid - 1, x);
+      if (arr[mid] > x) //#
+        return binarySearchWrong(arr, l, mid - 1, x); //#-2
 
       // Else the element can only be present
       // in right subarray
-      return binarySearch(arr, mid + 1, r, x);
+      return binarySearchWrong(arr, mid + 1, r, x); //# +2
     }
 
     // We reach here when element is not present
@@ -105,8 +99,8 @@ public class ArrayOperations {
   }
 
   public boolean membershipWrong(int[] A, int key) {
-    int index = binarySearchWrong(A, 0, A.length-1, key);
-    if (index >= 0) {
+    int index = binarySearchWrong(A, 0, A.length-1, key); //#-2
+    if (index >= 0) { //#
       return true;
     } else {
       return false;
@@ -117,7 +111,7 @@ public class ArrayOperations {
     sortWrong(A);
     //System.out.println(Arrays.toString(A));
     //System.out.println(key);
-    return membership(A, key);
+    return membershipWrong(A, key);
   }
 
 }

@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Random;
 
 public class Main {
@@ -6,22 +5,23 @@ public class Main {
 
         ArrayOperations ap = new ArrayOperations();
         Random random = new Random();
-        int size = 20;
+        int size = 100;
         int[] a = new int[size];
         int[] halfSorted = new int[size];
         int[] reversed = new int[size];
-        int key = random.nextInt(size);;
+        int key = random.nextInt(50);
         int key1 = 1;
         int key2 = 10;
-        int key3 = 20;
+        int key3 = 19;
     
-/*         //Random Testing
+        //Random Testing
+      
         for (int i = 0; i < 20; i++) {
           a[i] = random.nextInt(50);
         }
     
-        System.out.println(ap.membershipUnsortedWrong(a, key));
-        System.out.println(ap.membershipUnsorted(a,key)); */
+        System.out.println(ap.membershipUnsorted(a, key));
+        System.out.println(ap.membershipUnsortedWrong(a,key));
     
 
         /*
@@ -32,20 +32,20 @@ public class Main {
         
         */
 
-        for (int i = 0; i < reversed.length; i++) {
+        /* for (int i = 0; i < reversed.length; i++) {
           a[i] = i;
           halfSorted[i] = i;
           reversed[reversed.length-1-i] = i;
         }
         
         shuffleArray(halfSorted);
-        Arrays.sort (halfSorted, 0, a.length/2); 
+        Arrays.sort (halfSorted, 0, a.length/2);   */
         
         /* System.out.println(Arrays.toString(a));
         System.out.println(Arrays.toString(reversed));
         System.out.println(Arrays.toString(halfSorted)); */
       
-        //Test-case 1: (sorted, 1)       [0-wise]
+        /* //Test-case 1: (sorted, 1)       [0-wise]
         System.out.println(ap.membershipUnsorted(a,key1));
         System.out.println(ap.membershipUnsortedWrong(a,key1));
         System.out.println("1");
@@ -55,7 +55,7 @@ public class Main {
         System.out.println(ap.membershipUnsortedWrong(a,key2));
         System.out.println("2");
     
-        //Test-case 3: (sorted, 20)      [1-wise]
+        //Test-case 3: (sorted, 19)      [1-wise]
         System.out.println(ap.membershipUnsorted(a,key3));
         System.out.println(ap.membershipUnsortedWrong(a,key3));
         System.out.println("3");
@@ -75,7 +75,7 @@ public class Main {
         System.out.println(ap.membershipUnsortedWrong(reversed,key2));
         System.out.println("6");
 
-        //Test-case 7: (backwards, 20)   [2-wise]
+        //Test-case 7: (backwards, 19)   [2-wise]
         System.out.println(ap.membershipUnsorted(reversed,key3));
         System.out.println(ap.membershipUnsortedWrong(reversed,key3));
         System.out.println("7");
@@ -85,10 +85,10 @@ public class Main {
         System.out.println(ap.membershipUnsortedWrong(halfSorted,key2));
         System.out.println("8");
 
-        //Test-case 9: (half-sorted, 20) [2-wise]
+        //Test-case 9: (half-sorted, 19) [2-wise]
         System.out.println(ap.membershipUnsorted(halfSorted,key3));
         System.out.println(ap.membershipUnsortedWrong(halfSorted,key3));
-        System.out.println("9");
+        System.out.println("9"); */
 
       }
       
