@@ -3,7 +3,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayOperations ap = new ArrayOperations();
+        Mutations ap = new Mutations();
         Random random = new Random();
         int size = 100;
         int[] a = new int[size];

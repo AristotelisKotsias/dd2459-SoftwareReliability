@@ -1,5 +1,5 @@
 
-public class ArrayOperations {
+public class Mutations {
 
   public void sort(int arr[])
   {
